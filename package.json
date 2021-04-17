@@ -19,6 +19,9 @@
       "**.test.js"
     ]
   },
+  "engines": {
+    "node": "12.14.1"
+  },
   "keywords": [],
   "author": "Adam Scott",
   "license": "MIT",
