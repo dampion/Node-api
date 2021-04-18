@@ -19,7 +19,7 @@ const db = require('./db');
 // access db host from .env
 const DB_HOST = process.env.DB_HOST;
 // access port from .env
-const port = process.env.port || 4000;
+const port = process.env.PORT || 4000;
 // access models which is composed of all models
 const models = require('./models')
 // 結構描述
