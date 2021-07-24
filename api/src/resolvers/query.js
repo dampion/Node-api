@@ -44,7 +44,7 @@ module.exports = {
     // 如果尋找的註記數量超過限制
     // 將 hasNextPage 設為 true 並將註記調整至限制
     if (notes.length > limit) {
-      hasNextPzge = true;
+      hasNextPage = true;
       notes = notes.slice(0, -1)
     }
 
