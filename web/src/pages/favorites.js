@@ -1,4 +1,6 @@
+import { useQuery } from '@apollo/client';
 import React, { useEffect } from 'react';
+import { GET_MY_FAVORITES } from '../gql/query';
 
 const Favorites = () => {
   // effect 讓我們將副作用納入元件中，更新與元件本身無關的內容
@@ -7,12 +9,16 @@ const Favorites = () => {
     document.title = 'Favorites - dampion Note';
   })
 
-  return (
-    <div>
-      <h1>dampion Note</h1>
-      <p>These are my favorites</p>
-    </div>   
-  )
+  const { loading, error, data } = useQuery(GET_MY_FAVORITES);
+
+  if (loading) return 'Loading';
+  if (error) return `Error${error.message}`;
+
+  if (data.me.notes.length !== 0) {
+    return <NoteFeed notes={data.me.favorites} />;
+  } else {
+    return <p>No favorites yet</p>;
+  }
 }
 
 export default Favorites;

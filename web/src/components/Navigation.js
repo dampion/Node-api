@@ -62,6 +62,9 @@ const Navigation = () => {
         <li>
           <Link to="signup">Sign up</Link>
         </li>
+        <li>
+          <Link to="new">New</Link>
+        </li>
       </NavList>
     </Nav>
   )

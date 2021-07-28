@@ -13,8 +13,10 @@ import SignUp from './signup'
 import SignIn from './signin'
 import NewNote from './new'
 import { useQuery, gql } from '@apollo/client'
+import EditNote from './edit';
 // import { Component } from 'react';
 
+// check if login-in
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const { loading, error, data } = useQuery(IS_LOGGED_IN);
   {/* if the data is loading, display a loading message*/}
@@ -58,6 +60,7 @@ const Pages = () => {
         <PrivateRoute path="/mynotes" component={MyNotes} />
         <PrivateRoute path="/favorites" component={Favorites} />
         <PrivateRoute path="/new" component={NewNote} />
+        <PrivateRoute path="/edit/:id" component={EditNote} />
         <Route path="/note/:id" component={NotePage} />
         <Route path="/signup" component={SignUp} />
         <Route path="/signin" component={SignIn} />
