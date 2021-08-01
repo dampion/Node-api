@@ -14,7 +14,7 @@ const Favorites = () => {
   if (loading) return 'Loading';
   if (error) return `Error${error.message}`;
 
-  if (data.me.notes.length !== 0) {
+  if (data.me.favorites.length !== 0) {
     return <NoteFeed notes={data.me.favorites} />;
   } else {
     return <p>No favorites yet</p>;

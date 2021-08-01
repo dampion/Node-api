@@ -70,3 +70,9 @@ dist
 # cypress videos & screenshots
 cypress/videos
 cypress/screenshots
+
+# exception
+.env*
+final/*
+solutions/*
+cover.png

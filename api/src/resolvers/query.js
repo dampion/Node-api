@@ -37,7 +37,7 @@ module.exports = {
     }
 
     // 在db中尋找限制 + 1 個註記，從最新到最舊排序
-    let = notes = await models.Note.find(cursorQuery)
+    let notes = await models.Note.find(cursorQuery)
       .sort({ _id: -1 })
       .limit(limit + 1);
 
