@@ -18,7 +18,7 @@ const typeDefs = gql`
     createdAt: DateTime!
     updatedAt: DateTime!
     favoriteCount: Int!
-    favoritedBy: [User!]
+    favoritedBy: [User]
   }
 
   type User {
@@ -33,9 +33,9 @@ const typeDefs = gql`
   type Query {
     hello: String
     notes: [Note!]!
-    note(id: ID!): Note!
+    note(id: ID): Note!
     user(username: String!): User
-    users: [User!]
+    users: [User!]!
     me: User!
     noteFeed(cursor: String): NoteFeed
   }

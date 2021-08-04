@@ -6,7 +6,7 @@ import Button from '../components/Button'
 import NoteFeed from '../components/NoteFeed'
 
 const GET_NOTES = gql`
-  query NoteFeed($cursor: String) {
+  query noteFeed($cursor: String) {
     noteFeed(cursor: $cursor) {
       cursor
       hasNextPage

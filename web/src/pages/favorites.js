@@ -1,6 +1,7 @@
 import { useQuery } from '@apollo/client';
 import React, { useEffect } from 'react';
 import { GET_MY_FAVORITES } from '../gql/query';
+import NoteFeed from '../components/NoteFeed'
 
 const Favorites = () => {
   // effect 讓我們將副作用納入元件中，更新與元件本身無關的內容

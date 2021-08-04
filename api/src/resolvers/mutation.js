@@ -141,8 +141,12 @@ module.exports = {
           $inc: {
             favoriteCount: -1
           }
+        },
+        {
+          // Set new to true to return the updated doc
+          new: true
         }
-      )
+      );
     } else {
       return await models.Note.findByIdAndUpdate(
         id,
@@ -153,8 +157,12 @@ module.exports = {
           $inc: {
             favoriteCount: 1
           }
+        },
+        {
+          // Set new to true to return the updated doc
+          new: true
         }
-      )
+      );
     }
   }
 }
